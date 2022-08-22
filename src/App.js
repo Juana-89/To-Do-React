@@ -1,21 +1,20 @@
+import { TodoCounter } from './components/TodoCounter';
+import { TodoItem } from './components/TodoItem';
+import { TodoSearch } from './components/TodoSearch';
+import { TodoList } from './components/TodoList';
+import { CreateTodoButton } from './components/CreateTodoButton';
 import './App.css';
 
 function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React aqui
-        </a>
-      </header>
+    <TodoCounter />
+    <TodoSearch />
+
+    <TodoList>
+      <TodoItem />
+    </TodoList>
+    <CreateTodoButton />
     </div>
   );
 }
