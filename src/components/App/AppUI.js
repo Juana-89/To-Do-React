@@ -1,4 +1,4 @@
-import React from 'react';
+import { useContext, Fragment } from 'react';
 import { TodoContext } from '../TodoContext/index';
 import { TodoCounter } from '../TodoCounter/index';
 import { TodoSearch } from '../TodoSearch/index';
@@ -17,10 +17,10 @@ function AppUI() {
     deleteTodo,
     openModal,
     setOpenModal,
-  } = React.useContext(TodoContext);
+  } = useContext(TodoContext);
   
   return (
-    <React.Fragment>
+    <Fragment>
       <TodoCounter />
       <TodoSearch />
 
@@ -48,7 +48,7 @@ function AppUI() {
       <CreateTodoButton
         setOpenModal={setOpenModal}
       />
-    </React.Fragment>
+    </Fragment>
   );
 }
 
