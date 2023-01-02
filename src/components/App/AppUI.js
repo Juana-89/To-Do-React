@@ -1,6 +1,5 @@
 import { useContext, Fragment } from 'react';
 import { TodoContext } from '../TodoContext/index';
-import { TodoCounter } from '../TodoCounter/index';
 import { TodoSearch } from '../TodoSearch/index';
 import { TodoList } from '../TodoList/index';
 import { TodoItem } from '../TodoItem/index';
@@ -21,7 +20,6 @@ function AppUI() {
   
   return (
     <Fragment>
-      <TodoCounter />
       <TodoSearch />
 
       <TodoList>
