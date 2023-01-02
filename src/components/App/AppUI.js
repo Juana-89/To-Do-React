@@ -1,4 +1,5 @@
 import { useContext, Fragment } from 'react';
+import { Header } from '../Header/index';
 import { TodoContext } from '../TodoContext/index';
 import { TodoSearch } from '../TodoSearch/index';
 import { TodoList } from '../TodoList/index';
@@ -19,7 +20,9 @@ function AppUI() {
   } = useContext(TodoContext);
   
   return (
-    <Fragment>
+    <Fragment >
+      <Header />
+      <h2 className="m-4">Agrega tareas</h2>
       <TodoSearch />
 
       <TodoList>

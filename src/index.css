@@ -11,7 +11,6 @@ code {
 }
 
 #root {
-  margin: 0 24px;
   position: relative;
   min-height: 100vh;
 }
