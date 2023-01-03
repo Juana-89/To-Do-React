@@ -8,7 +8,8 @@ function Header() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#"><img style={{ width: '100px' }} src={logo} alt="logo todo"/></Navbar.Brand>
+        <Navbar.Brand href="#"><img style={{ width: '80px' }} src={logo} alt="logo todo"/></Navbar.Brand>
+        <h3>ToDo</h3>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse className="justify-content-end">
           <Nav
@@ -16,18 +17,19 @@ function Header() {
             style={{ maxHeight: '100px'}}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+            
+            <NavDropdown title="Home" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action1">Link</NavDropdown.Item>
+              <NavDropdown.Item href="#action2">
                 Another action
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
+              <NavDropdown.Item href="#action3">
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="#action4">Action</Nav.Link>
+            <Nav.Link href="#action5">Link</Nav.Link>
             <Nav.Link href="#" disabled>
               Link
             </Nav.Link>

@@ -14,7 +14,7 @@ function TodoSearch() {
   };
 
   return (
-    <InputGroup className="mb-3 w-75 m-4" size="lg" >
+    <InputGroup className="mb-3 m-4" size="lg" style={{maxWidth:'96%'}} sx={'w-75'}>
       <InputGroup.Text id="basic-addon1">
         <FaSearch />
       </InputGroup.Text>
