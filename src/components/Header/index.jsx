@@ -9,7 +9,7 @@ function Header() {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#"><img style={{ width: '80px' }} src={logo} alt="logo todo"/></Navbar.Brand>
-        <h3>ToDo</h3>
+        <h3>ToDo List</h3>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse className="justify-content-end">
           <Nav

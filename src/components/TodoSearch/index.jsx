@@ -20,7 +20,7 @@ function TodoSearch() {
       </InputGroup.Text>
       <Form.Control
         className="TodoSearch"
-        placeholder="Busca una tarea guardada"
+        placeholder="Search for a saved task"
         value={searchValue}
         onChange={onSearchValueChange}
       />

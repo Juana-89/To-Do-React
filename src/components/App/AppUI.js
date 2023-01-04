@@ -22,7 +22,7 @@ function AppUI() {
   return (
     <Fragment >
       <Header />
-      <h2 className="m-4">Agrega tareas</h2>
+      <h2 className="m-4">You can add tasks!</h2>
       <TodoSearch />
 
       <TodoList>
