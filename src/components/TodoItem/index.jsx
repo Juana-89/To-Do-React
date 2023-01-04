@@ -1,15 +1,13 @@
 import ListGroup from 'react-bootstrap/ListGroup';
-import Overlay from 'react-bootstrap/Overlay';
 import Tooltip from 'react-bootstrap/Tooltip';
-import './TodoItem.css';
-import { FaPaperclip, FaTrash } from "react-icons/fa";
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-
+import { FaPaperclip, FaTrash } from "react-icons/fa";
+import './TodoItem.css';
 
 function TodoItem(props) {
   return (
-    <ListGroup as="ul">
-    <ListGroup.Item as="li" className="TodoItem">
+    <ListGroup as="ul">TodoItem
+    <ListGroup.Item as="li" className="flex" style={{maxWidth:'97%'}}>
       <span
         className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
         onClick={props.onComplete}
