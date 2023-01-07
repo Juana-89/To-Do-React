@@ -1,12 +1,12 @@
-import { useContext, Fragment } from 'react';
-import { Header } from '../Header/index';
-import { TodoContext } from '../TodoContext/index';
-import { TodoSearch } from '../TodoSearch/index';
-import { TodoList } from '../TodoList/index';
-import { TodoItem } from '../TodoItem/index';
-import { TodoForm } from '../TodoForm/index';
-import { CreateTodoButton } from '../CreateTodoButton/index';
-import { Modal } from '../Modal/index';
+import { useContext, Fragment } from "react";
+import { Header } from "../Header/index";
+import { TodoContext } from "../TodoContext/index";
+import { TodoSearch } from "../TodoSearch/index";
+import { TodoList } from "../TodoList/index";
+import { TodoItem } from "../TodoItem/index";
+import { TodoForm } from "../TodoForm/index";
+import { CreateTodoButton } from "../CreateTodoButton/index";
+import { Modal } from "../Modal/index";
 
 function AppUI() {
   const {
@@ -18,19 +18,19 @@ function AppUI() {
     openModal,
     setOpenModal,
   } = useContext(TodoContext);
-  
+
   return (
-    <Fragment >
+    <Fragment>
       <Header />
       <h2 className="m-4">You can add tasks!</h2>
       <TodoSearch />
 
       <TodoList>
-        {error && <p>Hubo un error...</p>}
-        {loading && <p>Cargando...</p>}
-        {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
-        
-        {searchedTodos.map(todo => (
+        {error && <p>There was a error...</p>}
+        {loading && <p>Loading...</p>}
+        {!loading && !searchedTodos.length && <p>Create your first TODO!</p>}
+
+        {searchedTodos.map((todo) => (
           <TodoItem
             key={todo.text}
             text={todo.text}
@@ -46,9 +46,7 @@ function AppUI() {
           <TodoForm />
         </Modal>
       )}
-      <CreateTodoButton
-        setOpenModal={setOpenModal}
-      />
+      <CreateTodoButton setOpenModal={setOpenModal} />
     </Fragment>
   );
 }

@@ -13,7 +13,7 @@ function TodoItem(props) {
       <span
         className={`flex link-dark font-weight-bold position-absolute ${props.completed}` }
         onClick={props.onComplete }
-        style={{fontSize:'24px', marginLeft: '12px', cursor:'pointer'}}
+        style={{fontSize:'24px', marginLeft: '12px'}}
       >
          <Form.Check type="radio" id="op"/>
       </span>
@@ -26,7 +26,7 @@ function TodoItem(props) {
         onClick={props.onDelete}
       >
         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Delete task</Tooltip>}>
-        <span className="position-absolute d-inline-block link-danger" style={{cursor:'pointer', top: '15px', right: '20px'}}>
+        <span className="position-absolute d-inline-block link-danger" style={{top: '15px', right: '20px'}}>
         <FaTrash style={{fontSize:'24px'}}/>
         </span>
         </OverlayTrigger>
