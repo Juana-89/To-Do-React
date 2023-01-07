@@ -1,17 +1,11 @@
-import { useState } from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Form from 'react-bootstrap/Form';
 import Tooltip from 'react-bootstrap/Tooltip';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import { FaRegCircle, FaCheckCircle, FaTrash } from "react-icons/fa";
-// import './TodoItem.css';
+import { FaTrash } from "react-icons/fa";
 
 function TodoItem(props) {
-  const [disabled, setDisabled ] =useState(true)
-  const opDisable = () => {
-    setDisabled(false)
 
-  }
   return (
     <ListGroup as="ul">
     <ListGroup.Item as="li" className="flex" style={{maxWidth:'97%'}}>
@@ -21,7 +15,7 @@ function TodoItem(props) {
         onClick={props.onComplete }
         style={{fontSize:'24px', marginLeft: '12px', cursor:'pointer'}}
       >
-         <Form.Check aria-label="option 1" onClick= {opDisable} id="op"/>
+         <Form.Check type="radio" id="op"/>
       </span>
       </OverlayTrigger>
       <p className={`TodoItem-p ${props.completed && 'text-decoration-line-through'}`}
