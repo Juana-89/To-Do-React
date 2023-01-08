@@ -44,7 +44,7 @@ function TodoForm() {
       </Form.Group>
       <Form.Group className="mb-3">
           <Button className="m-2" variant="primary" type="submit" size="lg">
-            <FaRegSave/>{" "}Add
+            <FaRegSave/>{" "}Add 
           </Button>
           <Button className="m-2" variant="light" type="button" onClick={onCancel} size="lg">
           <FaRegTimesCircle/>{" "}Cancel

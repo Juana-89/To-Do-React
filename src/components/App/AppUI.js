@@ -7,6 +7,7 @@ import { TodoItem } from "../TodoItem/index";
 import { TodoForm } from "../TodoForm/index";
 import { CreateTodoButton } from "../CreateTodoButton/index";
 import { Modal } from "../Modal/index";
+import { Footer } from "../Footer/index";
 
 function AppUI() {
   const {
@@ -47,6 +48,7 @@ function AppUI() {
         </Modal>
       )}
       <CreateTodoButton setOpenModal={setOpenModal} />
+      <Footer/>
     </Fragment>
   );
 }
