@@ -5,7 +5,6 @@ import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import { FaRegSave, FaRegTimesCircle } from "react-icons/fa";
 
-
 function TodoForm() {
   const [newTodoValue, setNewTodoValue] = useState("");
   const { addTodo, setOpenModal } = useContext(TodoContext);
@@ -26,7 +25,7 @@ function TodoForm() {
     <Form
       onSubmit={onSubmit}
       style={{ width: "100%", borderRadius: '8px',maxWidth: "350px", padding: "33px 40px" }}
-      className="flex mb-2 bg-white"
+      className="flex mb-2 bg-white flex-direction-column   justify-content-center   align-items-center;"
     >
       <Form.Group className="mb-3">
         <Form.Label className="text-black">
