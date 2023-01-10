@@ -1,4 +1,4 @@
-import { useContext, Fragment } from "react";
+import { useContext, Fragment, createContext, useState } from "react";
 import { Header } from "../Header/index";
 import { TodoContext } from "../TodoContext/index";
 import { TodoSearch } from "../TodoSearch/index";
@@ -8,6 +8,9 @@ import { TodoForm } from "../TodoForm/index";
 import { CreateTodoButton } from "../CreateTodoButton/index";
 import { Modal } from "../Modal/index";
 import { Footer } from "../Footer/index";
+import './App.css'
+
+export const ThemeContext = createContext(null)
 
 function AppUI() {
   const {
@@ -19,9 +22,13 @@ function AppUI() {
     openModal,
     setOpenModal,
   } = useContext(TodoContext);
-
+const [theme, setTheme] = useState("dark")
+const toggleTheme = () => {
+  setTheme((theme) => (theme === "light" ? "dark" : "light"))
+}
   return (
-    <Fragment>
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <section className="main" id={theme}>
       <Header />
       <h2 className="m-4">You can add tasks!</h2>
       <TodoSearch />
@@ -49,7 +56,8 @@ function AppUI() {
       )}
       <CreateTodoButton setOpenModal={setOpenModal} />
       <Footer/>
-    </Fragment>
+    </section>
+    </ThemeContext.Provider>
   );
 }
 
