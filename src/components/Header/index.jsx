@@ -1,23 +1,24 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../../assets/logo.png'
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import logo from "../../assets/logo.png";
 
 function Header() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#"><img style={{ width: '80px' }} src={logo} alt="logo todo"/></Navbar.Brand>
-        <h3>ToDo List</h3>
+        <Navbar.Brand href="#">
+          <img style={{ width: "80px" }} src={logo} alt="logo todo" />
+        </Navbar.Brand>
+        <h3 className="text-success">ToDo List</h3>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse className="justify-content-end">
           <Nav
             className="my-2 my-lg-0"
-            style={{ maxHeight: '100px'}}
+            style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            
             <NavDropdown title="Home" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action1">Link</NavDropdown.Item>
               <NavDropdown.Item href="#action2">
