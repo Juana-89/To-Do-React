@@ -8,10 +8,10 @@ function Header() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="#" className="d-flex justify-content-around">
           <img style={{ width: "80px" }} src={logo} alt="logo todo" />
+          <h3 className="text-dark mt-3">ToDo List</h3>
         </Navbar.Brand>
-        <h3 className="text-success">ToDo List</h3>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse className="justify-content-end">
           <Nav
