@@ -24,8 +24,8 @@ function TodoForm() {
   return (
     <Form
       onSubmit={onSubmit}
-      style={{ width: "100%", borderRadius: '8px',maxWidth: "350px", padding: "33px 40px" }}
-      className="flex mb-2 bg-white flex-direction-column   justify-content-center   align-items-center;"
+      style={{ background: "#fff", width: "100%", borderRadius: '8px',maxWidth: "350px", padding: "33px 40px" }}
+      className="flex mb-2 flex-direction-column   justify-content-center   align-items-center;"
     >
       <Form.Group className="mb-3">
         <Form.Label className="text-black">
@@ -43,10 +43,10 @@ function TodoForm() {
         </InputGroup>
       </Form.Group>
       <Form.Group className="mb-3">
-          <Button className="m-2" variant="primary" type="submit" size="lg">
+          <Button className="m-2" variant="primary" type="submit" size="md">
             <FaRegSave/>{" "}Add 
           </Button>
-          <Button className="m-2" variant="light" type="button" onClick={onCancel} size="lg">
+          <Button className="m-2" variant="light" type="button" onClick={onCancel} size="md">
           <FaRegTimesCircle/>{" "}Cancel
           </Button>
       </Form.Group>
