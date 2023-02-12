@@ -1,6 +1,7 @@
 .CreateTodoButton {
-
-
+    border-radius: 50%;
+    bottom: 24px;
+    right: 24px;
     height: 64px;
     width: 64px;
     transform: rotate(0);
